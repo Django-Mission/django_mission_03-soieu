@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}글 입력{% endblock %}
+
+{% block content %}
+    <h1>Post 입력 화면 - form 사용</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {# as_p, as_ul, as_table 등으로도 사용 가능 #}
+        {{ form.as_p }}
+        <input type="submit">
+    </form>
+{% endblock %}
